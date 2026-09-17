@@ -1,3 +1,19 @@
+<?php
+$n1 = (float) $_POST['n1'];
+$n2 = (float) $_POST['n2'];
+
+$adicao = $n1 + $n2;
+$subtracao = $n1 - $n2;
+$multiplicacao = $n1 * $n2;
+$divisao = $n1 / $n2;
+$modulo = $n1 % $n2;
+$potencia = $n1 ** $n2;
+$concatenacao = $n1 . $n2;
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,9 +27,26 @@
 <body>
     <div>
         <h1 align="center">Operações Aritméticas</h1>
+        <h2 align="center">Resultados </h1>
         <hr>
-
         
+        <h3>
+            <?php echo "$n1 + $n2 = $adicao"; ?>
+        </h3>
+        <h3>
+            <?php echo "$n1 - $n2 = $subtracao"; ?>
+        </h3>
+        <h3>
+            <?php echo "$n1 X $n2 = $multiplicacao"; ?>
+        </h3>
+        <h3>
+            <?php echo "$n1 ÷ $n2 = ". number_format($divisao,2,',','.'); ?>
+        </h3>
+        <h3>
+            <?php echo "$n1 <sup> $n2 </sup> =". number_format($potencia,2,',','.'); ?>
+        </h3>
+
+
     </div>
 </body>
 
